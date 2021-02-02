@@ -1,0 +1,44 @@
+table {
+    width: 100%;
+  }
+  .pdl-5{
+    border: none;
+
+      padding-left: 7px!important;
+  }
+  .wd-30{
+    width: 30%!important;
+  }
+
+
+.wd-200{
+border: none;
+    width: 200px!important;
+
+}
+.wd-180{
+    border: none;
+
+    width: 180px!important;
+}
+.wd-125{
+    border: none;
+
+    width: 125px!important;
+}
+.wd-130{
+    border: none;
+
+    width: 130px!important;
+}
+.wd-100{
+    width: 100px!important;
+}
+.wd-60{
+width: 60px!important;
+}
+.wd-80{
+    border: none;
+
+    width: 80px!important;
+    }

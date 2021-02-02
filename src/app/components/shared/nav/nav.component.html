@@ -1,0 +1,11 @@
+<mat-toolbar class="app-header header-style " [ngClass]="{'transparent':!currentUser}">
+  <div [ngClass]="{'':currentUser}"><a class="brand-name"><img class="logoImage" src="assets/images/logo1.png"></a>
+  </div>
+    <span class="nav-tool-items" *ngIf="!currentUser">
+    <a mat-button routerLink="login" routerLinkActive="active">Log in</a>
+    <!-- <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Register</a> -->
+  </span>
+    <span class="nav-tool-items" *ngIf="currentUser">
+      <a class="theme-btn-primary" mat-button mat-raised-button (click)="logout()">logout</a>
+    </span>
+</mat-toolbar>

@@ -1,0 +1,34 @@
+
+{
+  "_id": "5f3e176cea2578bfb5ba9bbc",
+  "outletInformation": {
+    "outletId":"Labaiik01",
+    "name":"kebab house",
+    "number":"+971938388232",
+    "outletType":"string",
+    "outletLogo": "https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U"
+
+
+
+
+  },
+  "customerInformation":{
+    "name": "Test user",
+    "number": "+9719383884454"
+  },
+  "rider": "any",
+  "orderStatus":  "ASSIGNED",
+  "createdAt":"2020-08-20T06:25:48.037Z",
+  "paymentInformation":{
+    "paymentType": "CARD",
+    "totalAmount": 20,
+    "discount": 0
+  },
+  "schldFor": "any",
+  "zone": "any",
+  "details": [{
+    "pick": "dsdsa",
+    "status": true
+  }]
+}
+

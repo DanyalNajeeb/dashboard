@@ -1,0 +1,110 @@
+<div *ngIf="!displayTable" class="loading">Loading&#8230;</div>
+
+<div class="formtab">
+      <div class="">
+                <div id="fountainG" *ngIf="!displayTabs">
+                                        <div id="fountainG_1" class="fountainG"></div>
+                                        <div id="fountainG_2" class="fountainG"></div>
+                                        <div id="fountainG_3" class="fountainG"></div>
+                                        <div id="fountainG_4" class="fountainG"></div>
+                                        <div id="fountainG_5" class="fountainG"></div>
+                                        <div id="fountainG_6" class="fountainG"></div>
+                                        <div id="fountainG_7" class="fountainG"></div>
+                                        <div id="fountainG_8" class="fountainG"></div>
+                </div>
+      </div>
+        <button (click)="toggle()" id="bt" mat-button><mat-icon>search</mat-icon>  </button>
+        <button (click)="reload()" id="bt1" mat-button><mat-icon>refresh</mat-icon>
+        </button>
+        <mat-tab-group class="content" *ngIf="displayTable" class="mainDashboard wrapper-margin"
+                (selectedTabChange)="tabChanged($event)" [selectedIndex]="selectedIndex" #selectedLableTab>
+
+                <mat-tab>
+                        <ng-template mat-tab-label>
+                                Created
+                                <div matBadge={{OrderData.newOrderCount}} class="c-badge"></div>
+                        </ng-template>
+
+                        <app-created></app-created>
+
+
+                </mat-tab>
+                <mat-tab>
+                        <ng-template mat-tab-label>
+                                Assigned
+                                <div matBadge={{OrderData.acceptedOrderWebCount}} class="c-badge"></div>
+                        </ng-template>
+                        <app-assigned></app-assigned>
+
+                </mat-tab>
+                <mat-tab>
+                        <ng-template mat-tab-label>
+                                Accepted
+                                <div matBadge={{OrderData.assignedOrderCount}} class="c-badge"></div>
+                        </ng-template>
+                        <app-accepted></app-accepted>
+
+                </mat-tab>
+                <mat-tab>
+
+                        <ng-template mat-tab-label>
+                                Reached
+                                <div matBadge={{OrderData.reachedAtStoreOrderCount}} class="c-badge"></div>
+                        </ng-template>
+                        <app-reached></app-reached>
+
+                </mat-tab>
+                <mat-tab>
+                        <ng-template mat-tab-label>
+                                Dispatched
+                                <div matBadge={{OrderData.pickedUpOrderCount}} class="c-badge"></div>
+                        </ng-template>
+                        <app-dispatched></app-dispatched>
+
+                </mat-tab>
+                <mat-tab>
+
+                        <ng-template mat-tab-label>
+                                <div class="paddingLeftRight">
+                                        Reached Customer
+                                        <div matBadge={{OrderData.reachedCustomerOrderCount}} class="c-badge"></div>
+                                </div>
+                        </ng-template>
+
+
+                        <app-reachedcustomer></app-reachedcustomer>
+
+                </mat-tab>
+                <mat-tab>
+                        <ng-template mat-tab-label>
+                                Delivered
+                                <div matBadge={{OrderData.completedOrderCount}} class="c-badge"></div>
+                        </ng-template>
+
+                        <app-delivered></app-delivered>
+
+                </mat-tab>
+                <mat-tab>
+
+                        <ng-template mat-tab-label>
+                                Cancelled
+                                <div matBadge={{OrderData.cancelledOrderCount}} class="c-badge"></div>
+                        </ng-template>
+
+
+                        <app-cancelled></app-cancelled>
+
+                </mat-tab>
+                <mat-tab>
+
+                        <ng-template mat-tab-label>
+                                Rejected
+                                <div matBadge={{OrderData.rejectedOrderCount}} class="c-badge"></div>
+                        </ng-template>
+
+
+                        <app-reject></app-reject>
+
+                </mat-tab>
+        </mat-tab-group>
+</div>

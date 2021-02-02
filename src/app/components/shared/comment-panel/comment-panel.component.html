@@ -1,0 +1,50 @@
+<div class="commentSection">
+<div class="sectionHead">
+        <h1 mat-dialog-title>
+                {{title}}
+              </h1>
+</div>
+    <div class="sectionBody">
+        <p>{{data.orderId}}</p>
+        <p>{{data.rider}}</p>
+
+      <div class="text-center">
+        <mat-form-field Order Status="fill">
+            <mat-label>Order Status</mat-label>
+            <mat-select [(value)]="OrderStatus">
+                <!-- status.slice(0,orderIndex+1) -->
+                    <mat-option *ngFor="let opt of status" [value]="opt.key">{{opt.key}}</mat-option>
+     
+                  </mat-select>
+
+            <!-- <mat-select [(value)]="OrderStatus" placeholder="Select your Order Status" [(ngModel)]="OrderStatus" >
+
+                    <mat-option *ngFor="let opt of status" [value]="opt.name">{{opt.name}}</mat-option>
+            </mat-select> -->
+        </mat-form-field>
+          <mat-form-field Reason="fill">
+              <mat-label>Reason</mat-label>
+              <mat-select placeholder="Select Reason" [(ngModel)]="commentReason" >
+                    <mat-option *ngFor="let opt of reasons" [value]="opt.name">{{opt.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+          <div mat-dialog-actions>
+                <button mat-button class="btn-outlined" (click)="onDismiss()">No</button>
+                <button mat-raised-button class="btn-color m-left" (click)="onConfirm()">Yes</button>
+              </div>      </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
